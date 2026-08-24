@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="icon" type="image/png" sizes="32x32" href="https://parkourgfsjofjad.github.io/websitething/LargeLogo.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://parkourgfsjofjad.github.io/websitething/SmallLogo.png">
+<link rel="icon" >
 <title>
 Parkourchamp's Website
 </title>
@@ -17,7 +16,7 @@ Parkourchamp's Website
     margin: auto;
     padding-left: 15px;
     height: 700px; 
-    width: 90%; 
+    width: 80%; 
     }
 #clicker-thingy{
     background-color: white; 
@@ -35,16 +34,72 @@ Parkourchamp's Website
     border-width: 2px;
     border-style:solid;
 }
+#sidebar{
+    background-color: white; 
+    color: black; 
+    height:500px;
+    width:100px;
+    border-width:5px;
+    border-style:solid;
+    position:fixed;
+    text-align: center;
+}
+#Cat-Area{
+    background-color: white; 
+    color: black; 
+    margin: auto;
+    padding-left: 15px;
+    height: 700px;
+    width: 80%; 
+    }
+#cat1{
+    height: 160px;
+    width: 160px;
+    top: 150px;
+    left:50px;
+    transform: rotate(8deg);
+    position:relative;
+}
+#cat2{
+    height: 200px;
+    width: 200px;
+    top: 350px;
+    left:800px;
+    transform: rotate(-12deg);
+    position:relative;
+}
+#cat3{
+    height: 180px;
+    width: 180px;
+    transform: rotate(22deg);
+    position:relative;
+}
 </style>
 </head>
 <body>
-<div id="Top" class="Border">
-<h1>Welcome to Parkourchamp's website!</h1>
-<h2>This is a place where i put random stuff.<br> Thing of the week or day or whatever (i will not be consistent with this):<br><br>Super small clicker game</h2>
-<div id="clicker-thingy" class="Border">
-    <input id="c" onclick="s++; value = s"><script>s=0;</script>
-    <pre id="clicker-thingy-code-box"><code>&lt;input onclick="s++; innerHTML = s"&gt;&lt;script&gt;s=0;&lt;/script&gt;</code></pre>
-    <button id="copy-code-clicker-thingy" onclick="navigator.clipboard.writeText('<input onclick=&quot;s++; innerHTML = s&quot;><script>s=0;</script>')">Copy Code</button></div>
+<div id="sidebar">
+    <h3>page navigation</h3>
+    <a href="#Top">Go To The Top</a><br><br>
+    <a href="#Cat-Area">Go To The Cat Area</a><br><br>
+    <a href="#bottom">Go To The Bottom</a>
 </div>
+<div id="Top" class="Border">
+    <h1>Welcome to Parkourchamp's website!</h1>
+    <h2>This is a place where i put random stuff.<br> Thing of the week (i will not be consistent with this):<br><br>Super small clicker game code</h2>
+    <div id="clicker-thingy" class="Border">
+        <input id="c" onclick="s++; value = s"><script>s=0;</script>
+        <pre id="clicker-thingy-code-box"><code>&lt;input onclick="s++; innerHTML = s"&gt;&lt;script&gt;s=0;&lt;/script&gt;</code></pre>
+        <button id="copy-code-clicker-thingy" onclick="navigator.clipboard.writeText('<input onclick=&quot;s++; innerHTML = s&quot;><script>s=0;</script>')">Copy Code</button>
+    </div>
+</div>
+<h1><br><br><br></h1>
+<div id="Cat-Area" class="Border">
+    <h1>Cat Area</h1>
+    <img src="https://parkourgfsjofjad.github.io/websitething/Cat-Photo1.jpg" id="cat1">
+    <img src="https://parkourgfsjofjad.github.io/websitething/Cat-Photo2.jpg" id="cat2">
+    <img src="https://parkourgfsjofjad.github.io/websitething/Cat-Photo3.jpg" id="cat3">
+</div>
+<h1><br><br></h1>
+<p id="bottom">Bottom of the webpage</p>
 </body>
 </html>
