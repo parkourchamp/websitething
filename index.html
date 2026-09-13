@@ -17,7 +17,6 @@ Parkourchamp's Website
     color: black; 
     margin: auto;
     padding-left: 15px;
-    height: 700px; 
     width: 80%; 
     }
 #clicker-thingy{
@@ -76,18 +75,60 @@ Parkourchamp's Website
     transform: rotate(22deg);
     position:relative;
 }
+#colour-main-box{
+    height: 200px;
+    width: 200px;
+    padding: 30px;
+    text-wrap-mode: wrap;
+}
+a:visited{
+    color:blue;
+}
+a:hover{
+    color:green;
+}
 </style>
 </head>
 <body>
 <div id="sidebar">
     <h3>page navigation</h3>
     <a href="#Top">Go To The Top</a><br><br>
+    <a href="#current-thing-for-nav">Go to current thing</a><br><br>
+    <a href="#past-things-for-nav">Go to previous things</a><br><br>
     <a href="#Cat-Area">Go To The Cat Area</a><br><br>
     <a href="#bottom">Go To The Bottom</a>
 </div>
 <div id="Top" class="Border">
     <h1>Welcome to Parkourchamp's website!</h1>
-    <h2>This is a place where i put random stuff.<br> Thing of the week or day or whatever (i will not be consistent with this):<br><br>Super small clicker game code</h2>
+    <h2>This is a place where i put random stuff.<br> Thing of the week or day or whatever (i will not be consistent with this):<br><br><br></h2>
+    <div id="colorfultextthingy">
+        <h2 id="current-thing-for-nav">Current Thing:<br>
+            Epilepsy Warning (just dont do random background with a high value and you should be fine)</h2>
+        <div id="colour-main-box" class="Border">
+            <p id="color-text">rng color text!</p>
+            <button onclick="colorchange()">change text color</button>
+            <button onclick="startlooping()">random background colors effect</button>
+            <input id="speed" type="number" value="1" min="0.00001" step="any">
+            <label for="speed">how many times the color changes per second</label>
+        </div>
+        <script>
+            let clickingtimething;
+            const colorfultext = document.getElementById("color-text")
+            const backgro = document.getElementById("colour-main-box")
+            function colorchange(){
+                colorfultext.style.color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+            }
+            function startlooping(){
+                clearInterval(clickingtimething)
+                clickingtimething = setInterval(() => {
+                    backgro.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+                }, 1/speed.value*1000)
+            }
+        </script>
+    </div>        
+        
+    <h2 id="past-things-for-nav">Older Stuff:<br>
+    <br>Super small clicker game code</h2>
     <div id="clicker-thingy" class="Border">
         <input id="c" onclick="s++; value = s"><script>s=0;</script>
         <pre id="clicker-thingy-code-box"><code>&lt;input onclick="s++;value=s"&gt;&lt;script&gt;s=0;&lt;/script&gt;</code></pre>
